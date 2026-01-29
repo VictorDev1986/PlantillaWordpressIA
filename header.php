@@ -76,14 +76,14 @@
     <header class="sticky top-0 z-50 bg-cream shadow-sm">
         <div class="container mx-auto px-6 lg:px-12 py-6">
             <div class="flex items-center justify-between">
-                <a href="index.php" class="font-cormorant italic text-3xl lg:text-4xl text-slate-900 font-semibold">
+                <a href="/" class="font-cormorant italic text-3xl lg:text-4xl text-slate-900 font-semibold">
                     Estudio Nómada
                 </a>
                 <nav class="hidden md:flex space-x-12">
-                    <a href="index.php" class="text-gray-700 hover:text-amber-600 transition-smooth font-medium">Inicio</a>
-                    <a href="servicios.php" class="text-gray-700 hover:text-amber-600 transition-smooth font-medium">Servicios</a>
-                    <a href="blog.php" class="text-gray-700 hover:text-amber-600 transition-smooth font-medium">Blog</a>
-                    <a href="contacto.php" class="text-gray-700 hover:text-amber-600 transition-smooth font-medium">Contacto</a>
+                    <a href="/" class="text-gray-700 hover:text-amber-600 transition-smooth font-medium">Inicio</a>
+                    <a href="/servicios" class="text-gray-700 hover:text-amber-600 transition-smooth font-medium">Servicios</a>
+                    <a href="/blog" class="text-gray-700 hover:text-amber-600 transition-smooth font-medium">Blog</a>
+                    <a href="/contacto" class="text-gray-700 hover:text-amber-600 transition-smooth font-medium">Contacto</a>
                 </nav>
                 <button class="md:hidden text-slate-900 text-2xl">
                     <i class="fas fa-bars"></i>

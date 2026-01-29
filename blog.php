@@ -69,8 +69,8 @@
                         $slug = isset($post->slug) ? $post->slug : '';
                         $date = isset($post->date) ? date('d M Y', strtotime($post->date)) : '';
                         
-                        // Imagen destacada
-                        $image = 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=800'; // Fallback
+                        // Imagen destacada - Solo usar si existe en WordPress
+                        $image = null; // Sin fallback
                         $image_alt = $title;
                         if (isset($post->_embedded->{'wp:featuredmedia'}[0]->source_url)) {
                             $image = $post->_embedded->{'wp:featuredmedia'}[0]->source_url;
@@ -90,12 +90,14 @@
                         ?>
                         
                         <article class="group">
+                            <?php if ($image): ?>
                             <div class="overflow-hidden mb-6">
                                 <img src="<?php echo esc_url($image); ?>" 
                                      alt="<?php echo htmlspecialchars($image_alt); ?>" 
                                      class="w-full h-96 object-cover group-hover:scale-105 transition-smooth"
                                      loading="lazy">
                             </div>
+                            <?php endif; ?>
                             <span class="text-xs uppercase tracking-widest text-amber-600 font-semibold">
                                 <?php echo htmlspecialchars($category); ?>
                             </span>

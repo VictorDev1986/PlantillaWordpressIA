@@ -23,7 +23,7 @@ if (empty($slug)) {
         <div class="text-center px-6">
             <h1 class="font-cormorant text-8xl font-semibold mb-6">404</h1>
             <p class="text-2xl mb-8">Proyecto no encontrado</p>
-            <a href="blog.php" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-3 transition-all">
+            <a href="/blog" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-3 transition-all">
                 Volver al blog
             </a>
         </div>
@@ -59,7 +59,7 @@ if ($response === false) {
         <div class="text-center px-6 max-w-2xl">
             <h1 class="font-cormorant text-6xl font-semibold text-slate-900 mb-6">Error de conexión</h1>
             <p class="text-xl mb-8">No se pudo conectar con el servidor. Por favor, intenta nuevamente más tarde.</p>
-            <a href="blog.php" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-3 transition-all">
+            <a href="/blog" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-3 transition-all">
                 Volver al blog
             </a>
         </div>
@@ -99,7 +99,7 @@ if (empty($posts) || !is_array($posts) || count($posts) === 0) {
                 <p class="text-xl text-gray-600 mb-8 leading-relaxed">
                     Lo sentimos, el proyecto que buscas no existe o ha sido movido.
                 </p>
-                <a href="blog.php" class="inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-4 transition-all">
+                <a href="/blog" class="inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white font-medium px-8 py-4 transition-all">
                     <i class="fas fa-arrow-left mr-2"></i> Volver al blog
                 </a>
             </div>
@@ -119,8 +119,8 @@ $post_content = isset($post->content->rendered) ? $post->content->rendered : '';
 $post_excerpt = isset($post->excerpt->rendered) ? strip_tags($post->excerpt->rendered) : '';
 $post_date = isset($post->date) ? date('d \d\e F, Y', strtotime($post->date)) : '';
 
-// Imagen destacada
-$post_image = 'https://images.unsplash.com/photo-1615529182904-14819c35db37?w=1600'; // Fallback
+// Imagen destacada - Solo usar si existe en WordPress
+$post_image = null; // Sin fallback
 $image_alt = $post_title;
 if (isset($post->_embedded->{'wp:featuredmedia'}[0]->source_url)) {
     $post_image = $post->_embedded->{'wp:featuredmedia'}[0]->source_url;
@@ -197,7 +197,7 @@ include 'header.php';
             <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Explora nuestra colección completa de proyectos de diseño de interiores
             </p>
-            <a href="blog.php" class="inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white font-medium px-10 py-4 text-lg transition-all">
+            <a href="/blog" class="inline-flex items-center bg-amber-600 hover:bg-amber-700 text-white font-medium px-10 py-4 text-lg transition-all">
                 <i class="fas fa-arrow-left mr-3"></i> Ver todos los proyectos
             </a>
         </div>

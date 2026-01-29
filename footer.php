@@ -18,10 +18,10 @@
                         Navegación
                     </h4>
                     <ul class="space-y-3">
-                        <li><a href="index.php" class="text-gray-600 hover:text-amber-600 transition-smooth">Inicio</a></li>
-                        <li><a href="servicios.php" class="text-gray-600 hover:text-amber-600 transition-smooth">Servicios</a></li>
-                        <li><a href="blog.php" class="text-gray-600 hover:text-amber-600 transition-smooth">Blog</a></li>
-                        <li><a href="contacto.php" class="text-gray-600 hover:text-amber-600 transition-smooth">Contacto</a></li>
+                        <li><a href="/" class="text-gray-600 hover:text-amber-600 transition-smooth">Inicio</a></li>
+                        <li><a href="/servicios" class="text-gray-600 hover:text-amber-600 transition-smooth">Servicios</a></li>
+                        <li><a href="/blog" class="text-gray-600 hover:text-amber-600 transition-smooth">Blog</a></li>
+                        <li><a href="/contacto" class="text-gray-600 hover:text-amber-600 transition-smooth">Contacto</a></li>
                     </ul>
                 </div>
 
