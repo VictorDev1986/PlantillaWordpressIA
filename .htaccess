@@ -2,19 +2,16 @@
 RewriteEngine On
 RewriteBase /
 
-# Permitir acceso a archivos y directorios existentes
+# Regla para post individual: /blog/nombre-proyecto
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# Regla para post individual: /blog/nombre-proyecto
 RewriteRule ^blog/([a-z0-9-]+)/?$ articulo.php?slug=$1 [L,QSA]
 
 # Regla para listado del blog: /blog
 RewriteRule ^blog/?$ blog.php [L]
 
-# Opcional: Remover extensión .php de las URLs
-# Descomenta las siguientes líneas si deseas URLs sin .php
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteCond %{REQUEST_FILENAME}.php -f
-# RewriteRule ^([^\.]+)$ $1.php [NC,L]
+# Remover extensión .php de las URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

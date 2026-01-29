@@ -11,7 +11,7 @@
             <p class="text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-light">
                 Creamos interiores que reflejan tu esencia, combinando funcionalidad y estética con un enfoque personalizado y sostenible
             </p>
-            <a href="contacto.php" class="inline-block bg-amber-600 text-white px-12 py-5 text-lg font-medium hover:bg-amber-700 transition-smooth">
+            <a href="/contacto" class="inline-block bg-amber-600 text-white px-12 py-5 text-lg font-medium hover:bg-amber-700 transition-smooth">
                 Iniciar Proyecto
             </a>
         </div>
@@ -94,7 +94,7 @@
             </div>
 
             <div class="text-center mt-16">
-                <a href="servicios.php" class="inline-block border-2 border-slate-900 text-slate-900 px-10 py-4 text-lg font-medium hover:bg-slate-900 hover:text-white transition-smooth">
+                <a href="/servicios" class="inline-block border-2 border-slate-900 text-slate-900 px-10 py-4 text-lg font-medium hover:bg-slate-900 hover:text-white transition-smooth">
                     Ver Todos los Servicios
                 </a>
             </div>
@@ -153,7 +153,7 @@
             </div>
 
             <div class="text-center mt-16">
-                <a href="blog.php" class="inline-block border-2 border-slate-900 text-slate-900 px-10 py-4 text-lg font-medium hover:bg-slate-900 hover:text-white transition-smooth">
+                <a href="/blog" class="inline-block border-2 border-slate-900 text-slate-900 px-10 py-4 text-lg font-medium hover:bg-slate-900 hover:text-white transition-smooth">
                     Ver Todos los Proyectos
                 </a>
             </div>
@@ -169,7 +169,7 @@
             <p class="text-xl text-gray-300 mb-12 leading-relaxed">
                 Comencemos una conversación sobre tu proyecto. Agenda una consulta sin compromiso y descubre cómo podemos hacer realidad tu visión.
             </p>
-            <a href="contacto.php" class="inline-block bg-amber-600 text-white px-16 py-6 text-lg font-medium hover:bg-amber-700 transition-smooth">
+            <a href="/contacto" class="inline-block bg-amber-600 text-white px-16 py-6 text-lg font-medium hover:bg-amber-700 transition-smooth">
                 Agendar Consulta
             </a>
         </div>
