@@ -3,7 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio Nómada - Diseño de Interiores Premium</title>
+    
+    <?php 
+    // Título dinámico por página
+    $page_title = 'Estudio Nómada - Diseño de Interiores Premium';
+    $page_description = 'Estudio de diseño de interiores especializado en crear espacios únicos que reflejan la esencia de cada cliente.';
+    $page_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    
+    if (isset($post_title) && !empty($post_title)) {
+        $page_title = $post_title . ' - Estudio Nómada';
+        if (isset($post_excerpt)) {
+            $page_description = strip_tags($post_excerpt);
+        }
+    } elseif (basename($_SERVER['PHP_SELF']) == 'blog.php') {
+        $page_title = 'Inspiración y Proyectos - Estudio Nómada';
+        $page_description = 'Explora nuestros proyectos más recientes y descubre ideas para tu próximo espacio.';
+    } elseif (basename($_SERVER['PHP_SELF']) == 'servicios.php') {
+        $page_title = 'Servicios de Diseño de Interiores - Estudio Nómada';
+        $page_description = 'Servicios profesionales de diseño de interiores para espacios residenciales y comerciales.';
+    } elseif (basename($_SERVER['PHP_SELF']) == 'contacto.php') {
+        $page_title = 'Contacto - Estudio Nómada';
+        $page_description = 'Contáctanos para comenzar tu proyecto de diseño de interiores.';
+    }
+    ?>
+    
+    <title><?php echo htmlspecialchars($page_title); ?></title>
+    <meta name="description" content="<?php echo htmlspecialchars($page_description); ?>">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="<?php echo htmlspecialchars($page_title); ?>">
+    <meta property="og:description" content="<?php echo htmlspecialchars($page_description); ?>">
+    <meta property="og:type" content="<?php echo isset($post_title) ? 'article' : 'website'; ?>">
+    <meta property="og:url" content="<?php echo htmlspecialchars($page_url); ?>">
+    <?php if (isset($post_image) && !empty($post_image)): ?>
+    <meta property="og:image" content="<?php echo htmlspecialchars($post_image); ?>">
+    <?php endif; ?>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
